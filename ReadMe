@@ -1,0 +1,39 @@
+
+go run
+ will run the system then delte after runing ( won't delte the actual vscode file)
+
+go build
+will creact a binary file that will run  on any same operating system that does not have GO installed
+
+the exctuable binary runing
+mac & linux   ./binaryFIleName
+window         binaryFIleName
+because binary can not be opening inthe terminmal like any other file
+
+int8
+pos or neg whole number, can use max 8 bits to represent that numbert
+byte is 8 bits meaning int8 is a byte. they go up by a power of 2. int8   int16  int32 int64
+
+int
+is a short hand that can be either int32 or int64
+
+uint
+can only be a postive integer
+
+rune
+means int32
+
+byte
+can store a single character. single charted uses ' ' while whole strings will use " "
+
+float32 or 64
+float number samle as js or py
+
+bool
+true or false
+
+nil
+is null or none
+
+complex128 or 64
+supports add sub div mul using normal and/ or imaginary number or both like a half and half
