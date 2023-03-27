@@ -1,4 +1,6 @@
 
+RUN CODE
+
 go run
  will run the system then delte after runing ( won't delte the actual vscode file)
 
@@ -9,6 +11,9 @@ the exctuable binary runing
 mac & linux   ./binaryFIleName
 window         binaryFIleName
 because binary can not be opening inthe terminmal like any other file
+
+
+VARABLES
 
 int8
 pos or neg whole number, can use max 8 bits to represent that numbert
@@ -23,11 +28,13 @@ can only be a postive integer
 rune
 means int32
 
+string is for strings
+
 byte
 can store a single character. single charted uses ' ' while whole strings will use " "
 
 float32 or 64
-float number samle as js or py
+float number samle as js or py example: const x float32 = 9001
 
 bool
 true or false
@@ -37,3 +44,123 @@ is null or none
 
 complex128 or 64
 supports add sub div mul using normal and/ or imaginary number or both like a half and half
+
+:=
+can not change type by reasigning and when created can not be left empty to use later
+must be assigned at the momment of creation
+
+fmt
+Println() used to print values
+Printf() prints the types of the values
+    %T produce type <---
+    %v produces value <---
+    %b produces binary representation
+    %e produces number in scientifcat notation ex: 1.23e+10
+    %f proeduces a float without sci notaton
+        %.2f produces number nearts 100th ex: 14.79
+        %%%.3f prouces a numbter to the 100ths with a precent sign on te left side 
+Sprintf() prints string nothing else
+    the time will be printed out as a string typically used with Println()
+        
+
+
+func arhtmatic(){
+//to add must be the same types, if need to convert
+//convert using the smallest number of bis
+    a:=2
+    a++
+    a+=19
+    x:=5
+    y:=2
+    
+    // sqr, max, min, pow  all start with capital
+    // Round => round to neart interger=> float64
+    // Ceil , Floor
+    float := math.Max(float64(x),float64(y))
+    a = int(float)
+
+    str:="6789" // base 5 (zero inclusded) 
+
+    numStr, err := strconv.Atoi(str) //turn str to num, tells if error occures/ nill if it did not
+    fmt.Println(numStr,err)
+
+// the 10 is the base, number can be base 5 too, last is the number of bits I want to use
+    strNum, err := strconv.ParseInt(str, 10, 64)
+    
+}
+
+
+func str(){
+
+
+    var dio_stand_timeLen_IN_Seconds int= 9 //must be used or get an error
+
+    fmt.Println("when The World is called time stops for", dio_stand_timeLen_IN_Seconds)
+
+
+    var x int =1 //can leave emepty
+    y :=1 // := complier guess the type based on value can not change from in to float to string
+    z := "GWRR"
+    
+    fmt.Println(y == x) // produc true
+    fmt.Printf("%T  %T", z, y) //produced string and int
+
+    //%v  will print value in default form
+    fmt.Printf("%v D4C %T",y,z) // value of y D4C then type of Z
+    fmt.Printf("%v bite the dust", y)
+
+    text := "ProgrammingExpert"
+    fmt.Printf("\"%s\"", text)  // use escape characters meaning make qoute "ProgrammingExpert"
+
+}
+
+
+    // comparasions always convert up to not lose infomration and get OVERFLOW error
+    // && and  || or  <=  >=   not !
+
+    the if else statementes are the same as for javascript but no need for ()
+
+
+    a:=1.2
+    b:= 1
+    fmt.Println(a <= float64(b))
+
+
+    SWITCH STATMENT 
+
+    a:=4
+    switch a{
+    case 1:
+        fmt.Println("one")
+    case 2, 3,6 , 7:
+        fmt.Println("two")
+    default:
+        fmt.Println("D4C Love Train")
+    }
+
+    -------------------LOOP--------------------
+
+     for i := 0; i < 10; i++{
+        fmt.Println(i)
+    }
+
+     for x < 10 {  while loop
+    x++
+    fmt.Println(x)
+   }
+
+    jouskai :="Shining Diamond"
+
+   for i:=0; i< len(jouskai); i++ {  // i or any verable its an int not a float64
+
+    fmt.Println(jouskai[i]) //print out all utf8 nums, which are the bits each letter & space
+    fmt.Printf("%c\n", jouskai[i]) // the \n so it does not print all on one line
+   }
+
+   jouskai :="Shining Diamond"
+// rage use int32 data type
+  for i, el := range jouskai {// range is enumerator  _ used as palce holder for novarable
+    //wiout string i would print bite number amount and not character in jouskai
+    fmt.Println(i, string(el)) // index, letter
+  }
+ 
