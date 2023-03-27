@@ -9,13 +9,7 @@ import ("fmt"
 // function to runt the code main does not need to be called when activated
 func main() {
 
-   jouskai :="Shining Diamond"
-// rage use int32 data type
-  for i, el := range jouskai {// range is enumerator  _ used as palce holder for novarable
-    //wiout string i would print bite number amount and not character in jouskai
-    fmt.Println(i, string(el)) // index, letter
-  }
- 
+    fmt.Println("D4C")
   
 }
 /*
